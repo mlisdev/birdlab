@@ -11,8 +11,12 @@
     {% if bird.age > 0 %}
       <p>Age: {{ bird.age }}</p>
     {% else %}
-      <p>Age: Kitten</p>
+      <p>Age: Chick</p>
     {% endif %}
+      <div class="card-action">
+    <a href="{% url 'birds_update' bird.id %}">Edit</a>
+    <a href="{% url 'birds_delete' bird.id %}">Delete</a>
+  </div>
   </div>
 </div>
 
